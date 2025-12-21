@@ -31,15 +31,8 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 connectDB(); 
 
-// Enable CORS for a single frontend origin with credentials
-const FRONTEND_URL = 'https://nutri-connect-g69ggr437-deploy-wizards-projects.vercel.app';
-app.use(cors({ origin: FRONTEND_URL, credentials: true }));
-app.options('*', cors({ origin: FRONTEND_URL, credentials: true }));
-
-// To accept requests from ANY origin with credentials (use with caution):
-// const corsOptions = { origin: true, credentials: true };
-// app.use(cors(corsOptions));
-// app.options('*', cors(corsOptions));
+// Enable CORS
+app.use(cors());
 
 // Parse incoming JSON requests with increased limits for image uploads
 app.use(express.json({ limit: '10mb' })); 
