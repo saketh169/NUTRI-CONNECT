@@ -103,13 +103,14 @@ app.use('/api/settings', settingsRoutes);
 // Notification routes mounted at '/api/analytics'
 app.use('/api/analytics', notificationRoutes);
 
-// Serve static files from frontend dist folder
-const path = require('path');
-app.use(express.static(path.join(__dirname, '../../frontend/dist')));
+// Root route for health check
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Nutri-Connect Backend Server is running' });
+});
 
-// SPA routing - serve index.html for all non-API routes (must be last)
+// 404 handler for API routes
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
+  res.status(404).json({ error: 'Route not found', path: req.path });
 });
 
 // Start server
