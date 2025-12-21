@@ -5,19 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js", 
-    "build": "cd ../frontend && npm install && npm run build",
-
+    "dev": "nodemon src/server.js",
+    "build": "echo 'Backend build complete'",
     "seed:dietitians": "node src/scripts/seedDietitians.js",
     "seed:settings": "node src/scripts/seedSettings.js",
     "seed:chatbot": "node src/scripts/seedChatbot.js"
   },
 
   "_comments": {
-    "start": "Production - Render",
-    "dev": "Development - Auto-restart"
+    "start": "Production - Vercel/Node",
+    "dev": "Development - Auto-restart with nodemon",
+    "build": "Vercel build step for serverless deployment"
   },
   
   "author": "",
