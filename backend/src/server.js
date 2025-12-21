@@ -31,10 +31,12 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 connectDB(); 
 
-// Enable CORS for frontend origin from env (credentials supported)
-const FRONTEND_URL = process.env.FRONTEND_URL;
-app.use(cors({ origin: FRONTEND_URL, credentials: true }));
-app.options('*', cors({ origin: FRONTEND_URL, credentials: true }));
+app.use(cors());  
+
+// // Enable CORS for frontend origin from env (credentials supported)
+// const FRONTEND_URL = process.env.FRONTEND_URL;
+// app.use(cors({ origin: FRONTEND_URL, credentials: true }));
+// app.options('*', cors({ origin: FRONTEND_URL, credentials: true }));
 
 // To allow any origin with credentials, use the snippet below instead:
 // const corsOptions = { origin: true, credentials: true };
