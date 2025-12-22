@@ -14,6 +14,7 @@ export default defineConfig({
     }
   },
   build: {
+    outDir: 'build', // Output to build folder for consistency with Vercel
     chunkSizeWarningLimit: Infinity // Disable chunk size warnings
   }
 })
