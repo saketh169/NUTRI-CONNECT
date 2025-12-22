@@ -35,9 +35,9 @@ connectDB();
 app.use(cors());
 
 // // Enable CORS for any origin with credentials
-// const corsOptions = { origin: true, credentials: true };
-// app.use(cors(corsOptions));
-// app.options('*', cors(corsOptions));
+const corsOptions = { origin: true, credentials: true };
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 
 // Parse incoming JSON requests with increased limits for image uploads
