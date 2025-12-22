@@ -31,8 +31,15 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 connectDB(); 
 
-// Enable CORS
-app.use(cors());
+// Enable CORS for all origins
+app.use(cors({
+  origin: '*',
+  credentials: false,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.options('*', cors());
+
 
 // Parse incoming JSON requests with increased limits for image uploads
 app.use(express.json({ limit: '10mb' })); 
@@ -88,8 +95,6 @@ app.use('/api/chat', chatRoutes);
 
 // Payment routes mounted at '/api/payments'
 app.use('/api/payments', paymentRoutes);
-
-
 
 // Lab report routes mounted at '/api/lab-reports'
 app.use('/api/lab-reports', labReportRoutes);
