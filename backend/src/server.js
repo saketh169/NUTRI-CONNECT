@@ -31,10 +31,14 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 connectDB(); 
 
-// Enable CORS for any origin with credentials
-const corsOptions = { origin: true, credentials: true };
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+// Enable CORS
+app.use(cors());
+
+// // Enable CORS for any origin with credentials
+// const corsOptions = { origin: true, credentials: true };
+// app.use(cors(corsOptions));
+// app.options('*', cors(corsOptions));
+
 
 // Parse incoming JSON requests with increased limits for image uploads
 app.use(express.json({ limit: '10mb' })); 
