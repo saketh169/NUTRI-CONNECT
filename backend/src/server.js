@@ -31,8 +31,6 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 connectDB(); 
 
-// Enable CORS
-app.use(cors());
 
 // // Enable CORS for any origin with credentials
 const corsOptions = { origin: true, credentials: true };
