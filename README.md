@@ -2,6 +2,18 @@
 
 This project consists of a backend and frontend setup. The backend is a Node.js-based server, while the frontend is a React application :
 
+## Deployment
+
+### Vercel
+
+- **Frontend**: [Live Demo](https://nutri-connect-frontend.vercel.app)
+- **Backend**: [API](https://nutri-connect-backend.vercel.app)
+
+### Render
+
+- **Frontend**: [Live Demo](https://nutri-connect-frontend.onrender.com)
+- **Backend**: [API](https://nutri-connect-backend.onrender.com)
+
 - **`backend/`**: Root directory for the backend.
 
   - **`node_modules/`**: Contains backend dependencies.
