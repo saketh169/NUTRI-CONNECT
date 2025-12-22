@@ -1,4 +1,4 @@
-# FDFED-React
+# NUTRI-CONNECT DEPLOYMENT
 
 This project consists of a backend and frontend setup. The backend is a Node.js-based server, while the frontend is a React application :
 
