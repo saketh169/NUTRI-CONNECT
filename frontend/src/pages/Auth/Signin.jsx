@@ -265,7 +265,7 @@ const Signin = () => {
     // Fallback for unselected role
     if (!role || role === 'default') {
         return (
-            <section className="flex items-center justify-center bg-gray-100 p-4 min-h-[600px]">
+            <section className="flex items-center justify-center bg-gray-100 p-4 min-h-150">
                 <div className="w-full max-w-lg p-8 mx-auto rounded-3xl shadow-2xl bg-white animate-fade-in">
                     <div className="text-center p-8">
                         <h3 className="text-xl text-gray-700 font-semibold mb-4">Please select a role to sign in.</h3>
@@ -284,7 +284,7 @@ const Signin = () => {
 
     // Main Render with Formik Wrapper
     return (
-        <section className="flex items-center justify-center bg-gray-100 p-4 min-h-[600px]">
+        <section className="flex items-center justify-center bg-gray-100 p-4 min-h-150">
             <div className="w-full max-w-lg p-8 mx-auto rounded-3xl shadow-2xl bg-white animate-fade-in relative">
                 <button
                     onClick={() => navigate('/role')}

@@ -241,7 +241,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <section className="flex items-center justify-center bg-gray-100 p-4 min-h-[600px]">
+        <section className="flex items-center justify-center bg-gray-100 p-4 min-h-150">
             <div className="w-full max-w-[40%] p-8 mx-auto rounded-3xl shadow-2xl bg-white animate-fade-in relative">
                 <button
                     onClick={() => navigate(`/signin?role=${userRole}${corporateType === 'corporate_employee' ? '&corporateType=corporate_employee' : ''}`)}

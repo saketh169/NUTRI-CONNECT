@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/authController');
 const forgotPasswordController = require('../controllers/forgotPasswordController');
+// const twoFAController = require('../controllers/twoFAController'); // 2FA DISABLED
 const  upload  = require('../middlewares/uploadMiddleware');
 
 /**
