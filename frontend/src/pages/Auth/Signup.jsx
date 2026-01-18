@@ -593,7 +593,7 @@ const Signup = () => {
             default:
                 return (
                     <div className="mt-6 mb-3 w-full max-w-7xl mx-auto">
-                        <div className="text-center p-4 sm:p-5 flex flex-col items-center justify-center min-h-[150px]">
+                        <div className="text-center p-4 sm:p-5 flex flex-col items-center justify-center min-h-37.5">
                             <h3 className="text-xl text-gray-700 font-semibold mb-4">
                                 Please select a role to sign up.
                             </h3>
@@ -610,7 +610,7 @@ const Signup = () => {
     };
 
     return (
-        <section className="flex items-center justify-center bg-gray-100 p-2 sm:p-3 min-h-[650px]">
+        <section className="flex items-center justify-center bg-gray-100 p-2 sm:p-3 min-h-162.5">
             <div className="w-full max-w-7xl p-4 sm:p-5 mx-auto rounded-3xl shadow-2xl bg-white flex flex-col items-center justify-center animate-fade-in relative">
                 <button
                     onClick={() => navigate('/role')}
